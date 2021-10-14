@@ -42,4 +42,4 @@ def test_sendemail():
 
 
 if __name__ == '__main__':
-    pytest.main(["-v", "-s", "weather/weathers","--alluredir=%s"%report])
+    pytest.main(["-v", "-s", "weather/weathers/BJ_weather.py","--alluredir=%s"%report])
