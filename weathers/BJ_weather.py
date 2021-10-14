@@ -8,6 +8,7 @@ path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 report = os.path.join(path, 'allure-report')
+tpath = os.path.join(path, 'weathers/')
 
 @allure.feature('天气接口')
 def test_weather():
@@ -42,4 +43,4 @@ def test_sendemail():
 
 
 if __name__ == '__main__':
-    pytest.main(["-v", "-s", "BJ_weather.py","--alluredir=%s"%report])
+    pytest.main(["-v", "-s", "%sBJ_weather.py"%tpath,"--alluredir=%s"%report])
