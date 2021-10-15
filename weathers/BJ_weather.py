@@ -38,7 +38,7 @@ def test_weather():
 def test_sendemail():
     yag = yagmail.SMTP(user="825664936@qq.com", password='chjcwbaalukrbajg', host='smtp.qq.com')
 
-    yag.send("lilei@yixia.com", "每日天气", contents=test_weather())
+    yag.send("18519109588@163.com", "每日天气", contents=test_weather())
     print('邮件已发送')
 
 
