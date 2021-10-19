@@ -21,7 +21,7 @@ def test_weather():
         "date": 20211012,
         "pic_ver": 2
     }
-    res = requests.get(url=result_url, params=payload, verify=False)
+    res = requests.get(url=result_url, params=payload, useSSL=False)
     data = res.json()
 
     return json.dumps(("今天日期: %s" % data['forecast'][1].get("date"))).encode('utf-8').decode('unicode_escape'), \
