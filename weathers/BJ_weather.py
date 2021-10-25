@@ -24,8 +24,8 @@ def test_weather():
     res = requests.get(url=result_url, params=payload, verify=False)
     data = res.json()
 
-    return json.dumps(("今天日期: %s" % data['forecast'][1].get("date"))).encode('utf-8').decode('unicode_escape'), \
-           json.dumps(("今天天气： %s" % data['forecast'][1].get("day").get("wthr"))).encode('utf-8').decode(
+    return json.dumps(("明天日期: %s" % data['forecast'][2].get("date"))).encode('utf-8').decode('unicode_escape'), \
+           json.dumps(("明天天气： %s" % data['forecast'][2].get("day").get("wthr"))).encode('utf-8').decode(
                'unicode_escape'), \
            json.dumps(("空气质量： %s" % data['forecast'][1].get("aqi_level_name"))).encode('utf-8').decode(
                'unicode_escape'), \
